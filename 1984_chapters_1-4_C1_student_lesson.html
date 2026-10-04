@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A 90-minute C1 discussion lesson on Chapters 1–4 of George Orwell's Nineteen Eighty-Four." />
+  <title>1984 — Chapters 1–4 | Discussion & Historical Context</title>
+  <style>
+    :root{
+      --ink:#171716;
+      --muted:#625f58;
+      --paper:#f3f0e8;
+      --card:#fbfaf6;
+      --line:#d7d1c6;
+      --accent:#8f1f23;
+      --accent-dark:#681519;
+      --soft:#e8e2d8;
+      --shadow:0 18px 45px rgba(30,25,20,.08);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:
+        linear-gradient(rgba(143,31,35,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(143,31,35,.025) 1px, transparent 1px),
+        var(--paper);
+      background-size:32px 32px;
+      color:var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.65;
+    }
+    a{color:var(--accent-dark); text-underline-offset:3px}
+    .wrap{max-width:1180px; margin:0 auto; padding:28px 24px 70px}
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:28px;
+      padding:46px;
+      box-shadow:var(--shadow);
+      margin-bottom:24px;
+    }
+    .hero:after{
+      content:"";
+      position:absolute;
+      right:-70px;
+      top:-80px;
+      width:260px;
+      height:260px;
+      border:38px solid rgba(143,31,35,.08);
+      border-radius:50%;
+    }
+    .eyebrow{
+      font-size:.78rem;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:var(--accent);
+      margin-bottom:12px;
+    }
+    h1,h2,h3{
+      font-family: Georgia, "Times New Roman", serif;
+      line-height:1.15;
+      margin-top:0;
+    }
+    h1{font-size:clamp(2.5rem,7vw,5.6rem); margin-bottom:8px; letter-spacing:-.035em}
+    h2{font-size:clamp(1.8rem,4vw,2.8rem); margin-bottom:12px}
+    h3{font-size:1.35rem; margin-bottom:8px}
+    .subtitle{
+      max-width:750px;
+      font-size:1.12rem;
+      color:var(--muted);
+      margin:0 0 22px;
+    }
+    .meta{display:flex; flex-wrap:wrap; gap:10px; position:relative; z-index:1}
+    .pill{
+      border:1px solid var(--line);
+      background:#fff;
+      padding:7px 11px;
+      border-radius:999px;
+      font-size:.86rem;
+      font-weight:700;
+    }
+    .layout{
+      display:grid;
+      grid-template-columns:240px minmax(0,1fr);
+      gap:24px;
+      align-items:start;
+    }
+    .side{
+      position:sticky;
+      top:18px;
+      border:1px solid var(--line);
+      background:rgba(251,250,246,.94);
+      backdrop-filter: blur(9px);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .side strong{
+      display:block;
+      font-size:.75rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--muted);
+      margin-bottom:10px;
+    }
+    .side a{
+      display:block;
+      padding:8px 10px;
+      border-radius:10px;
+      color:var(--ink);
+      text-decoration:none;
+      font-size:.92rem;
+    }
+    .side a:hover{background:var(--soft)}
+    .progress{
+      height:7px;
+      background:var(--soft);
+      border-radius:999px;
+      overflow:hidden;
+      margin:16px 0 7px;
+    }
+    .progress > div{
+      width:0%;
+      height:100%;
+      background:var(--accent);
+      transition:width .2s ease;
+    }
+    #progressText{font-size:.78rem;color:var(--muted)}
+    main{min-width:0}
+    section{
+      scroll-margin-top:20px;
+      border:1px solid var(--line);
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+      margin-bottom:20px;
+    }
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:flex-start;
+      margin-bottom:20px;
+    }
+    .time{
+      flex:none;
+      background:var(--ink);
+      color:white;
+      padding:7px 10px;
+      border-radius:999px;
+      font-size:.8rem;
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+    .lead{font-size:1.06rem;color:var(--muted);max-width:820px}
+    .grid2,.grid3,.grid4{
+      display:grid;
+      gap:14px;
+    }
+    .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid4{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .card{
+      border:1px solid var(--line);
+      background:#fff;
+      border-radius:14px;
+      padding:18px;
+    }
+    .card p:last-child{margin-bottom:0}
+    .num{
+      display:inline-grid;
+      place-items:center;
+      width:30px;height:30px;
+      border-radius:50%;
+      background:var(--accent);
+      color:white;
+      font-weight:800;
+      font-size:.85rem;
+      margin-bottom:10px;
+    }
+    .prompt{
+      border-left:4px solid var(--accent);
+      background:#fff;
+      padding:16px 18px;
+      border-radius:0 12px 12px 0;
+      margin:12px 0;
+    }
+    .prompt strong{color:var(--accent-dark)}
+    .quote-wall{
+      background:var(--ink);
+      color:#f8f6ef;
+      border-radius:16px;
+      padding:24px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:clamp(1.15rem,2.7vw,1.7rem);
+      line-height:1.45;
+      letter-spacing:.015em;
+      text-align:center;
+      margin:18px 0;
+    }
+    .quote-wall span{color:#f2b9b5}
+    ul.clean{margin:10px 0 0; padding-left:1.2rem}
+    ul.clean li{margin:7px 0}
+    .rank{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:10px;
+      margin-top:14px;
+    }
+    .rank .card{min-height:110px}
+    textarea{
+      width:100%;
+      min-height:94px;
+      resize:vertical;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#fffefb;
+      padding:13px 14px;
+      font:inherit;
+      line-height:1.5;
+      color:var(--ink);
+      outline:none;
+    }
+    textarea:focus{border-color:var(--accent); box-shadow:0 0 0 3px rgba(143,31,35,.09)}
+    label.note{
+      display:block;
+      font-size:.77rem;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      font-weight:800;
+      color:var(--muted);
+      margin:14px 0 7px;
+    }
+    details{
+      border:1px solid var(--line);
+      border-radius:13px;
+      background:#fff;
+      margin:10px 0;
+      overflow:hidden;
+    }
+    summary{
+      cursor:pointer;
+      padding:15px 16px;
+      font-weight:800;
+      list-style:none;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary:after{content:"＋"; float:right; color:var(--accent)}
+    details[open] summary:after{content:"–"}
+    .details-body{padding:0 16px 16px;color:var(--muted)}
+    .details-body p{margin-top:0}
+    .context-tag{
+      display:inline-block;
+      font-size:.72rem;
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      color:var(--accent-dark);
+      background:#f4e5e3;
+      padding:4px 7px;
+      border-radius:999px;
+      margin-bottom:8px;
+    }
+    .matrix{
+      display:grid;
+      grid-template-columns:160px 1fr 1fr;
+      border:1px solid var(--line);
+      border-radius:14px;
+      overflow:hidden;
+      margin-top:15px;
+    }
+    .matrix > div{
+      padding:13px 14px;
+      border-right:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+    .matrix > div:nth-child(3n){border-right:none}
+    .matrix > div:nth-last-child(-n+3){border-bottom:none}
+    .matrix .head{font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em;background:var(--soft)}
+    .matrix .rowhead{font-weight:800}
+    .small{font-size:.87rem;color:var(--muted)}
+    .language-bank{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    .language-bank span{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:999px;
+      padding:7px 10px;
+      font-size:.88rem;
+    }
+    .debate{
+      border:2px solid var(--ink);
+      border-radius:16px;
+      background:#fff;
+      padding:24px;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.35rem;
+    }
+    .definition{
+      margin-top:12px;
+      font-size:.92rem;
+      color:var(--muted);
+      font-family:Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+    .checkrow{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:16px;
+      padding-top:14px;
+      border-top:1px solid var(--line);
+    }
+    .checkrow input{width:18px;height:18px; accent-color:var(--accent)}
+    .checkrow label{font-weight:750;font-size:.9rem}
+    .toolbar{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    button,.button{
+      border:none;
+      background:var(--ink);
+      color:#fff;
+      border-radius:10px;
+      padding:10px 13px;
+      font:inherit;
+      font-weight:800;
+      cursor:pointer;
+      text-decoration:none;
+      display:inline-block;
+    }
+    button.secondary,.button.secondary{
+      color:var(--ink);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+    .sourcebox{
+      font-size:.9rem;
+      color:var(--muted);
+    }
+    footer{
+      max-width:900px;
+      margin:28px auto 0;
+      text-align:center;
+      color:var(--muted);
+      font-size:.82rem;
+    }
+    @media(max-width:900px){
+      .layout{grid-template-columns:1fr}
+      .side{position:relative; top:auto}
+      .side nav{columns:2}
+      .grid4{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .grid3{grid-template-columns:1fr}
+    }
+    @media(max-width:640px){
+      .wrap{padding:14px 12px 40px}
+      .hero{padding:28px 22px}
+      section{padding:22px 18px}
+      .grid2,.grid4,.rank{grid-template-columns:1fr}
+      .matrix{grid-template-columns:110px 1fr}
+      .matrix > div:nth-child(3n){display:none}
+      .matrix > div{border-right:1px solid var(--line)}
+      .matrix > div:nth-child(2n){border-right:none}
+      .matrix > div:nth-last-child(-n+3){border-bottom:1px solid var(--line)}
+      .matrix > div:nth-last-child(-n+2){border-bottom:none}
+      .section-head{display:block}
+      .time{display:inline-block;margin-bottom:10px}
+    }
+    @media print{
+      body{background:white}
+      .side,.toolbar,.checkrow{display:none!important}
+      .layout{display:block}
+      .hero,section{box-shadow:none;break-inside:avoid}
+      a{color:inherit;text-decoration:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">George Orwell · Nineteen Eighty-Four · Part One</div>
+      <h1>Chapters 1–4</h1>
+      <p class="subtitle">A 90-minute conversation about private thought, surveillance, memory, propaganda, and the strange bureaucratic machinery of Oceania — with historical context from the world Orwell knew.</p>
+      <div class="meta">
+        <span class="pill">C1 discussion</span>
+        <span class="pill">90 minutes</span>
+        <span class="pill">1-to-1 lesson</span>
+        <span class="pill">Spoilers: Chapters 1–4 only</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="side">
+        <strong>Lesson map</strong>
+        <nav>
+          <a href="#opening">01 · Opening positions</a>
+          <a href="#chapters">02 · Four chapter lenses</a>
+          <a href="#context">03 · Historical context</a>
+          <a href="#deep">04 · Deep discussion</a>
+          <a href="#control">05 · Control map</a>
+          <a href="#debate">06 · Final debate</a>
+          <a href="#exit">07 · Exit thought</a>
+          <a href="#language">Language bank</a>
+          <a href="#sources">Sources</a>
+        </nav>
+        <div class="progress"><div id="bar"></div></div>
+        <div id="progressText">0 / 7 stages complete</div>
+      </aside>
+
+      <main>
+        <section id="opening">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 01</div>
+              <h2>Where does control begin?</h2>
+              <p class="lead">Choose a position quickly. The aim is not to find the “correct” answer; it is to make your assumptions visible before we return to Orwell.</p>
+            </div>
+            <span class="time">10 min</span>
+          </div>
+
+          <div class="grid2">
+            <div class="card"><h3>Surveillance</h3><p>“If you have nothing to hide, surveillance should not bother you.” Where do you draw the line between security and intrusion?</p></div>
+            <div class="card"><h3>Truth</h3><p>Can a government ever be justified in concealing or reshaping facts “for the public good”?</p></div>
+            <div class="card"><h3>Conformity</h3><p>If everyone around you publicly accepts the same belief, how difficult is it to preserve a private disagreement?</p></div>
+            <div class="card"><h3>Language</h3><p>Can changing the words available to us genuinely change the way we think, or only the way we express thought?</p></div>
+          </div>
+
+          <div class="prompt"><strong>Bridge to the novel:</strong> Which of these four tensions is already most powerful in Chapters 1–4? Give one concrete moment from the text.</div>
+
+          <label class="note" for="n1">Your opening thought</label>
+          <textarea id="n1" data-save placeholder="A claim, example, or question you want to return to later…"></textarea>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d1"><label for="d1">Stage complete</label></div>
+        </section>
+
+        <section id="chapters">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 02</div>
+              <h2>Four chapters, four lenses</h2>
+              <p class="lead">Instead of retelling the plot, reduce each chapter to the new kind of control it reveals. Then test whether the label is too simple.</p>
+            </div>
+            <span class="time">15 min</span>
+          </div>
+
+          <div class="grid2">
+            <div class="card">
+              <span class="num">1</span>
+              <h3>Private thought becomes dangerous</h3>
+              <p>The telescreen, the Two Minutes Hate, the diary, Winston’s fear of his own face and gestures.</p>
+              <p><strong>Discuss:</strong> Is the Party more interested in what Winston does, what he says, or what he feels?</p>
+            </div>
+            <div class="card">
+              <span class="num">2</span>
+              <h3>Private life is penetrated</h3>
+              <p>The Parsons household shows ideology entering the home through children, games, uniforms, suspicion, and political enthusiasm.</p>
+              <p><strong>Discuss:</strong> Why are the children frightening precisely because they seem sincere?</p>
+            </div>
+            <div class="card">
+              <span class="num">3</span>
+              <h3>Memory becomes political</h3>
+              <p>Winston’s dreams, uncertain childhood memories, compulsory exercise, shifting alliances, and the problem of proving that the past was ever different.</p>
+              <p><strong>Discuss:</strong> What happens to a person when memory is private but evidence is public?</p>
+            </div>
+            <div class="card">
+              <span class="num">4</span>
+              <h3>Bureaucracy manufactures history</h3>
+              <p>At the Ministry of Truth, Winston does not merely erase mistakes: he produces a past that fits the present, including the invented Comrade Ogilvy.</p>
+              <p><strong>Discuss:</strong> Why might routine office work be more disturbing than obvious violence?</p>
+            </div>
+          </div>
+
+          <div class="quote-wall"><span>BIG BROTHER IS WATCHING YOU</span><br>WAR IS PEACE · FREEDOM IS SLAVERY · IGNORANCE IS STRENGTH</div>
+
+          <div class="prompt"><strong>Close-reading challenge:</strong> The novel begins with broken lifts, cheap gin, bad plumbing, dust, coughing and shortages. Why spend so much time on shabby material details if the main subject is political power?</div>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d2"><label for="d2">Stage complete</label></div>
+        </section>
+
+        <section id="context">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 03</div>
+              <h2>Historical context: what Orwell had already seen</h2>
+              <p class="lead">Treat these as echoes, not as a one-to-one code. Oceania is fictional, but many of its methods draw on political systems and wartime institutions Orwell knew directly or observed closely.</p>
+            </div>
+            <span class="time">15 min</span>
+          </div>
+
+          <details open>
+            <summary>1 · Stalin’s Soviet Union — terror, purges, and an editable past</summary>
+            <div class="details-body">
+              <span class="context-tag">Link to Ch. 3–4</span>
+              <p>Under Stalin, political repression, show trials, censorship, secret-police power and the removal of disgraced figures from public records created a culture in which official history could change with political necessity. In Orwell’s Ministry of Truth, this logic becomes an ordinary profession.</p>
+              <p><strong>Question:</strong> Is Winston’s work primarily censorship, forgery, propaganda, or something more radical than all three?</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>2 · Nazi Germany — propaganda, mass emotion, and youth organisations</summary>
+            <div class="details-body">
+              <span class="context-tag">Link to Ch. 1–2</span>
+              <p>Nazi rule made extensive use of propaganda, public spectacle, leader worship, youth organisations and ideological education. The Hitler Youth and League of German Girls were designed to form loyal young citizens and subordinate individual identity to the regime.</p>
+              <p><strong>Question:</strong> Compare that aim with the Parsons children. What happens when political loyalty becomes a source of excitement, status and play?</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>3 · Wartime Britain — propaganda, rationing, censorship, bureaucracy</summary>
+            <div class="details-body">
+              <span class="context-tag">Link to the whole opening world</span>
+              <p>Britain during the Second World War had rationing, bomb damage, government propaganda and a Ministry of Information responsible for publicity and censorship. Orwell himself worked for the BBC’s Eastern Service from 1941 to 1943, producing wartime broadcasts.</p>
+              <p><strong>Question:</strong> Why is it important that Orwell’s satire also transforms familiar British institutions rather than locating political manipulation only “somewhere else”?</p>
+            </div>
+          </details>
+
+          <details>
+            <summary>4 · Spain — propaganda and the fragility of a shared reality</summary>
+            <div class="details-body">
+              <span class="context-tag">Orwell’s political formation</span>
+              <p>Orwell fought on the Republican side in the Spanish Civil War and saw violent conflict within the anti-Franco camp, including Soviet-backed repression. He later wrote about encountering newspaper accounts that radically contradicted events he believed he had witnessed.</p>
+              <p><strong>Question:</strong> How does that experience help explain Winston’s obsession with evidence and memory?</p>
+            </div>
+          </details>
+
+          <div class="prompt"><strong>Useful distinction:</strong> Orwell was not simply “predicting smartphones.” He was asking what happens when a political system gains power over public evidence, language, emotion, habit and social trust.</div>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d3"><label for="d3">Stage complete</label></div>
+        </section>
+
+        <section id="deep">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 04</div>
+              <h2>Deep discussion</h2>
+              <p class="lead">Choose four or five. For each answer, try to move from <em>observation</em> → <em>interpretation</em> → <em>implication</em>.</p>
+            </div>
+            <span class="time">18 min</span>
+          </div>
+
+          <div class="grid2">
+            <div class="card"><h3>1 · Self-surveillance</h3><p>Winston behaves as if he is being watched even when he cannot know whether anyone is watching. At what point does external surveillance become self-policing?</p></div>
+            <div class="card"><h3>2 · Emotion as politics</h3><p>During the Two Minutes Hate, people do not merely pretend to feel. Why is spontaneous emotion more useful to the Party than forced obedience?</p></div>
+            <div class="card"><h3>3 · The diary</h3><p>Why does writing privately feel like a political act? Is Winston trying to communicate, preserve evidence, preserve himself, or all three?</p></div>
+            <div class="card"><h3>4 · The family</h3><p>What happens to intimacy when children may become ideological observers of their parents? Which loyalties does the Party need to weaken?</p></div>
+            <div class="card"><h3>5 · Winston’s complicity</h3><p>He dislikes the system but performs highly skilled work for it. Does the novel present him as a rebel, a collaborator, a victim, or an unstable mixture?</p></div>
+            <div class="card"><h3>6 · Ordinary bureaucracy</h3><p>Why is the Ministry of Truth full of tubes, slips, cubicles, deadlines and procedural details? What does bureaucracy allow individuals not to think about?</p></div>
+            <div class="card"><h3>7 · Memory vs evidence</h3><p>If a memory cannot be externally verified, what gives it authority? Is private certainty enough to resist an official record?</p></div>
+            <div class="card"><h3>8 · Scarcity</h3><p>How might low-quality goods, shortages and physical discomfort contribute to political control even when they are not obviously “propaganda”?</p></div>
+          </div>
+
+          <label class="note" for="n4">Best idea from the discussion</label>
+          <textarea id="n4" data-save placeholder="The point you would most want to develop in an essay or longer conversation…"></textarea>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d4"><label for="d4">Stage complete</label></div>
+        </section>
+
+        <section id="control">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 05</div>
+              <h2>How does the Party control reality?</h2>
+              <p class="lead">For each domain, identify a moment from Chapters 1–4 and explain the psychological effect. Then choose the three most powerful mechanisms.</p>
+            </div>
+            <span class="time">14 min</span>
+          </div>
+
+          <div class="matrix">
+            <div class="head">Domain</div><div class="head">Example from Ch. 1–4</div><div class="head">Effect</div>
+            <div class="rowhead">Body</div><div>Physical Jerks, exhaustion, food and material conditions</div><div>Habit, discipline, reduced private space</div>
+            <div class="rowhead">Attention</div><div>Telescreens, slogans, posters, constant political messaging</div><div>Few moments in which attention is fully one’s own</div>
+            <div class="rowhead">Emotion</div><div>Two Minutes Hate and collective chanting</div><div>Fear and aggression become socially synchronized</div>
+            <div class="rowhead">Family</div><div>The Spies and the Parsons children</div><div>Private loyalty competes with ideological loyalty</div>
+            <div class="rowhead">Memory</div><div>Winston’s uncertain past; changing official versions</div><div>Personal recollection becomes fragile and isolating</div>
+            <div class="rowhead">History</div><div>Rectifying records; inventing Comrade Ogilvy</div><div>The present gains authority over what can count as evidence</div>
+          </div>
+
+          <h3 style="margin-top:22px">Rank the three strongest</h3>
+          <div class="rank">
+            <div class="card"><strong>#1</strong><textarea data-save placeholder="Mechanism + why"></textarea></div>
+            <div class="card"><strong>#2</strong><textarea data-save placeholder="Mechanism + why"></textarea></div>
+            <div class="card"><strong>#3</strong><textarea data-save placeholder="Mechanism + why"></textarea></div>
+          </div>
+
+          <div class="prompt"><strong>Harder question:</strong> Which form of control is most successful precisely because it eventually becomes invisible?</div>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d5"><label for="d5">Stage complete</label></div>
+        </section>
+
+        <section id="debate">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 06</div>
+              <h2>Final debate</h2>
+              <p class="lead">Build a case, then argue against yourself. Use evidence from at least two different chapters and one historical connection.</p>
+            </div>
+            <span class="time">12 min</span>
+          </div>
+
+          <div class="debate">
+            By the end of Chapter 4, the Party’s most frightening power is not physical violence but <em>epistemic power</em>: the ability to determine what can count as true.
+            <div class="definition"><strong>epistemic</strong> = relating to knowledge, evidence, truth, and the conditions under which we can know something.</div>
+          </div>
+
+          <div class="grid2" style="margin-top:14px">
+            <div class="card">
+              <h3>Build the case</h3>
+              <ul class="clean">
+                <li>What evidence supports the statement?</li>
+                <li>Why might control of records outlast individual acts of violence?</li>
+                <li>What role does Winston himself play in this system?</li>
+              </ul>
+            </div>
+            <div class="card">
+              <h3>Attack the case</h3>
+              <ul class="clean">
+                <li>Could epistemic control exist without the threat of punishment?</li>
+                <li>Are fear and force actually the foundation of every other mechanism?</li>
+                <li>Which scene most strongly challenges the statement?</li>
+              </ul>
+            </div>
+          </div>
+
+          <label class="note" for="n6">Your final position</label>
+          <textarea id="n6" data-save placeholder="I agree / disagree / partly agree because…"></textarea>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d6"><label for="d6">Stage complete</label></div>
+        </section>
+
+        <section id="exit">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Stage 07</div>
+              <h2>Exit thought</h2>
+              <p class="lead">Finish with one compact interpretation rather than a summary.</p>
+            </div>
+            <span class="time">6 min</span>
+          </div>
+
+          <div class="grid3">
+            <div class="card"><h3>Most disturbing</h3><p>The most disturbing feature of Oceania so far is… because…</p></div>
+            <div class="card"><h3>Historical echo</h3><p>One historical connection that changes how I read the novel is…</p></div>
+            <div class="card"><h3>Open question</h3><p>One question I now have about Winston or the Party is…</p></div>
+          </div>
+
+          <label class="note" for="n7">Write one sentence you would keep</label>
+          <textarea id="n7" data-save placeholder="A precise final claim…"></textarea>
+
+          <div class="checkrow"><input class="done" type="checkbox" id="d7"><label for="d7">Stage complete</label></div>
+        </section>
+
+        <section id="language">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">C1 support</div>
+              <h2>Language for literary discussion</h2>
+              <p class="lead">Use these to make your ideas more precise, tentative and analytical rather than simply more complicated.</p>
+            </div>
+          </div>
+
+          <h3>Interpretation</h3>
+          <div class="language-bank">
+            <span>What strikes me as particularly unsettling is…</span>
+            <span>I read this less as ___ and more as ___.</span>
+            <span>The scene can be interpreted as…</span>
+            <span>Orwell seems to blur the distinction between…</span>
+            <span>This detail suggests / implies / reinforces…</span>
+          </div>
+
+          <h3 style="margin-top:20px">Qualification & counterargument</h3>
+          <div class="language-bank">
+            <span>That reading is persuasive, although…</span>
+            <span>A possible counterargument would be…</span>
+            <span>Up to a point, but the text also…</span>
+            <span>I’m not sure the evidence fully supports…</span>
+            <span>It would be reductive to see this simply as…</span>
+          </div>
+
+          <h3 style="margin-top:20px">High-value vocabulary</h3>
+          <div class="grid3">
+            <div class="card"><strong>internalise</strong><br><span class="small">to absorb a rule or belief until it regulates you from within</span></div>
+            <div class="card"><strong>orthodoxy</strong><br><span class="small">the officially accepted set of beliefs</span></div>
+            <div class="card"><strong>coercion</strong><br><span class="small">control through pressure, force, or threat</span></div>
+            <div class="card"><strong>euphemism</strong><br><span class="small">a mild or misleading expression used in place of a harsher reality</span></div>
+            <div class="card"><strong>retroactively</strong><br><span class="small">in a way that changes how an earlier event is treated or understood</span></div>
+            <div class="card"><strong>epistemic</strong><br><span class="small">connected with knowledge, evidence, and what can count as true</span></div>
+          </div>
+        </section>
+
+        <section id="sources" class="sourcebox">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Reading & context</div>
+              <h2>Sources used for this lesson</h2>
+            </div>
+          </div>
+          <p><strong>Primary text:</strong> George Orwell, <em>Nineteen Eighty-Four</em>, the PDF edition used for this lesson. Chapters 1–4 end before the canteen scene that opens Chapter 5.</p>
+          <div class="toolbar">
+            <a class="button" target="_blank" rel="noopener" href="https://dn790002.ca.archive.org/0/items/NineteenEightyFour-Novel-GeorgeOrwell/orwell1984.pdf">Open the novel PDF</a>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://www.orwellfoundation.com/the-orwell-foundation/orwell/biography/">Orwell Foundation · Biography</a>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://encyclopedia.ushmm.org/content/en/article/indoctrinating-youth">USHMM · Indoctrinating Youth</a>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://www.nationalarchives.gov.uk/help-with-your-research/research-guides/propaganda/">UK National Archives · Propaganda</a>
+            <a class="button secondary" target="_blank" rel="noopener" href="https://www.loc.gov/exhibits/archives/intn">Library of Congress · Soviet archives</a>
+          </div>
+          <p class="small" style="margin-top:16px">Historical parallels are presented as context, not as claims that Oceania maps perfectly onto any single real regime.</p>
+        </section>
+
+        <div class="toolbar">
+          <button type="button" class="secondary" id="reset">Reset notes & progress</button>
+          <button type="button" onclick="window.print()">Print / Save as PDF</button>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      Student discussion page · Chapters 1–4 only · Notes are stored locally in this browser, not uploaded anywhere.
+    </footer>
+  </div>
+
+  <script>
+    const saveFields = [...document.querySelectorAll('[data-save]')];
+    const checks = [...document.querySelectorAll('.done')];
+    const bar = document.getElementById('bar');
+    const progressText = document.getElementById('progressText');
+
+    saveFields.forEach((el, i) => {
+      const key = 'orwell-note-' + i;
+      el.value = localStorage.getItem(key) || '';
+      el.addEventListener('input', () => localStorage.setItem(key, el.value));
+    });
+
+    checks.forEach((el, i) => {
+      const key = 'orwell-done-' + i;
+      el.checked = localStorage.getItem(key) === '1';
+      el.addEventListener('change', () => {
+        localStorage.setItem(key, el.checked ? '1' : '0');
+        updateProgress();
+      });
+    });
+
+    function updateProgress(){
+      const complete = checks.filter(c => c.checked).length;
+      const total = checks.length;
+      bar.style.width = ((complete / total) * 100) + '%';
+      progressText.textContent = complete + ' / ' + total + ' stages complete';
+    }
+    updateProgress();
+
+    document.getElementById('reset').addEventListener('click', () => {
+      const ok = confirm('Clear all saved notes and progress for this lesson?');
+      if(!ok) return;
+      saveFields.forEach((el, i) => {
+        localStorage.removeItem('orwell-note-' + i);
+        el.value = '';
+      });
+      checks.forEach((el, i) => {
+        localStorage.removeItem('orwell-done-' + i);
+        el.checked = false;
+      });
+      updateProgress();
+    });
+  </script>
+</body>
+</html>
