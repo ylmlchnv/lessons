@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toy Story Grammar Mission: do / does / did for emphasis</title>
+<style>
+:root{
+  --ink:#1f2d3d;--muted:#647180;--paper:#f8fbff;--card:#ffffff;
+  --blue:#2f6fb3;--blue2:#e6f0fb;--yellow:#e5b84f;--green:#4f8a66;
+  --line:#dbe5ef;--shadow:0 10px 28px rgba(40,72,105,.10)
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);
+background:radial-gradient(circle at 8% 0%,rgba(47,111,179,.11),transparent 22rem),radial-gradient(circle at 95% 4%,rgba(229,184,79,.12),transparent 24rem),var(--paper);line-height:1.56}
+.wrap{max-width:1050px;margin:auto;padding:24px}
+header{background:linear-gradient(135deg,#245b94,#2f6fb3 58%,#3f7b9b);color:white;border-radius:24px;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+header::after{content:"★";position:absolute;right:30px;top:2px;font-size:125px;opacity:.10;transform:rotate(10deg)}
+h1{margin:0 0 8px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.04}.subtitle{max-width:770px;margin:0;color:#f4f9ff}
+.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.10);padding:7px 11px;border-radius:999px;font-size:.9rem}
+.progress-shell{margin:18px 0 6px;background:#e8eef4;border-radius:999px;height:14px;overflow:hidden;border:1px solid #d7e0e9}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--yellow),var(--blue),var(--green));transition:.3s}.progress-text{font-size:.9rem;color:var(--muted);text-align:right}
+section{margin-top:26px}.panel{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px;box-shadow:var(--shadow)}
+h2{margin:0 0 13px;font-size:1.58rem}h3{margin:18px 0 8px;font-size:1.08rem}.intro{color:var(--muted);margin-top:-3px}
+.rulegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}.rule{background:#fbfdff;border:1px solid #e1eaf3;border-radius:15px;padding:16px}.ru{color:#485767}
+.formula{display:inline-block;font-family:"SFMono-Regular",Consolas,monospace;background:#eaf3fc;border:1px solid #d2e2f2;padding:2px 7px;border-radius:7px;color:#245a8d}.warning{border-left:4px solid var(--yellow);padding-left:12px}
+.contrast{margin-top:12px;border:1px solid #d7e2ed;border-radius:13px;overflow:hidden}.contrast div{padding:11px 13px;border-top:1px solid #e4ebf2}.contrast div:first-child{border-top:0}.contrast strong{color:var(--blue)}
+.question{border-top:1px solid #e6edf4;padding:18px 0 2px}.question:first-of-type{border-top:0}.qrow{display:flex;gap:10px;align-items:flex-start}.num{flex:0 0 32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--blue2);color:var(--blue);font-weight:850}.qbody{flex:1}.prompt{margin:2px 0 10px}
+input[type=text]{width:min(100%,560px);padding:11px 12px;border-radius:10px;border:1.5px solid #bdcad7;font:inherit;background:#fff;color:var(--ink);outline:none}
+.options{display:grid;gap:8px;margin:8px 0}.option{display:flex;gap:8px;align-items:flex-start;border:1px solid #dfe7ef;border-radius:10px;padding:9px 10px;background:#fff}
+button{border:0;border-radius:10px;padding:10px 14px;font:inherit;font-weight:760;cursor:pointer}.check{background:var(--blue);color:white}.show{background:#f7efd9;color:#755716}.ghost{background:#eef2f5;color:var(--ink)}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.feedback{display:none;margin-top:10px;padding:11px 12px;border-radius:10px;font-size:.95rem}
+.feedback.ok{display:block;background:#e9f5ed;border:1px solid #b9dfc5;color:#215a3d}.feedback.no{display:block;background:#fff0ee;border:1px solid #edc4be;color:#7b3333}.feedback.note{display:block;background:#fff8e8;border:1px solid #ead7a4;color:#715720}
+.hintline{font-size:.88rem;color:var(--muted);margin-top:5px}.correct-field{border-color:#62a77b !important;background:#f4fbf6 !important}.wrong-field{border-color:#ca6b6b !important;background:#fff8f7 !important}
+.case{background:linear-gradient(180deg,#ffffff,#f3f8fd);border-color:#d8e5f2}.case-title{color:#2a6095}
+.scorebox{position:sticky;bottom:12px;margin-top:24px;background:#22364a;color:white;border-radius:15px;padding:14px 16px;display:flex;justify-content:space-between;gap:12px;align-items:center;box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.scorebox strong{font-size:1.08rem}.mini{font-size:.86rem;color:#dbe7f1}.footer{text-align:center;color:#73808d;font-size:.85rem;padding:28px 8px 10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Toy Story Grammar Mission</h1>
+  <p class="subtitle"><strong>do / does / did for emphasis</strong> • B2 • bilingual recap + self-checking practice</p>
+  <div class="meta"><span class="pill">🤠 contrast & correction</span><span class="pill">🚀 spoken emphasis</span><span class="pill">🧠 B2 nuance</span></div>
+</header>
+
+<div class="progress-shell"><div class="progress-bar" id="progressBar"></div></div>
+<div class="progress-text" id="progressText">Missions completed: 0 / 24</div>
+
+<section class="panel">
+  <h2>1. Grammar recap / Повторение</h2>
+  <p class="intro">At B2, the form is easy; the interesting part is <strong>why a speaker chooses it</strong>.</p>
+  <div class="rulegrid">
+    <div class="rule"><h3>1) The basic pattern</h3><p><span class="formula">do / does / did + base verb</span></p>
+      <p><em>I <strong>do like</strong> this plan.</em><br><em>Buzz <strong>does care</strong> about the others.</em><br><em>Woody <strong>did try</strong> to help.</em></p>
+      <p class="ru">Это утвердительные предложения. <strong>do/does/did</strong> добавляется не для времени, а для эмфазы.</p></div>
+
+    <div class="rule"><h3>2) Contrast / correction</h3>
+      <p>We often use emphatic <strong>do</strong> when another person thinks the opposite.</p>
+      <p><em>“You don’t trust Buzz.”<br>“I <strong>do trust</strong> him.”</em></p>
+      <p class="ru">Смысл: «Нет, это не так. Я правда ему доверяю».</p></div>
+
+    <div class="rule"><h3>3) Strong feeling</h3>
+      <p><em>I <strong>do love</strong> that idea.</em><br><em>Jessie <strong>does miss</strong> her friends.</em></p>
+      <p class="ru">Может усиливать мнение или чувство: «действительно», «правда», «всё-таки».</p></div>
+
+    <div class="rule"><h3>4) Present vs past</h3>
+      <p><strong>do</strong> → I/you/we/they<br><strong>does</strong> → he/she/it<br><strong>did</strong> → all subjects in the past</p>
+      <p><em>They <strong>do want</strong> to help.</em><br><em>He <strong>does know</strong> the way.</em><br><em>She <strong>did warn</strong> us.</em></p></div>
+
+    <div class="rule"><h3>5) Base verb after do/does/did</h3>
+      <p class="warning">✅ <em>He does <strong>care</strong>.</em><br>❌ <em>He does <strong>cares</strong>.</em></p>
+      <p class="warning">✅ <em>Woody did <strong>try</strong>.</em><br>❌ <em>Woody did <strong>tried</strong>.</em></p>
+      <p class="ru">Время и лицо уже выражены в <strong>does/did</strong>, поэтому основной глагол идёт в базовой форме.</p></div>
+
+    <div class="rule"><h3>6) Not with BE or modals</h3>
+      <p>✅ <em>Buzz <strong>is</strong> brave.</em><br>❌ <em>Buzz does be brave.</em></p>
+      <p>✅ <em>Woody <strong>can</strong> help.</em><br>❌ <em>Woody does can help.</em></p>
+      <p class="ru">С <em>be</em> и modal verbs emphatic <em>do</em> обычно не используется.</p></div>
+
+    <div class="rule"><h3>7) Tags can reinforce the point</h3>
+      <p><em>You <strong>do</strong> trust him, <strong>don’t you?</strong></em><br>
+      <em>She <strong>does</strong> remember, <strong>doesn’t she?</strong></em><br>
+      <em>He <strong>did</strong> call, <strong>didn’t he?</strong></em></p></div>
+
+    <div class="rule"><h3>8) Tone matters</h3>
+      <p><em>I like the idea.</em> = neutral</p><p><em>I <strong>do</strong> like the idea.</em> = stronger; corrective, reassuring, or surprising</p>
+      <p class="ru">В речи <strong>do/does/did</strong> обычно получает ударение.</p></div>
+  </div>
+  <div class="contrast">
+    <div><strong>Neutral:</strong> Woody wants to help.</div>
+    <div><strong>Correction:</strong> Woody <strong>does want</strong> to help. You’re wrong about him.</div>
+    <div><strong>Past correction:</strong> Woody <strong>did try</strong> to help, even if the plan failed.</div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>2. Choose the natural reply</h2>
+  <p class="intro">Pick the sentence that best matches the context.</p>
+
+  <div class="question" data-type="radio" data-answer="b"><div class="qrow"><div class="num">1</div><div class="qbody">
+    <p class="prompt">“You don’t like Buzz’s plan.” — “That’s not true. I ___ like it.”</p>
+    <div class="options"><label class="option"><input type="radio" name="q1" value="a"> am</label><label class="option"><input type="radio" name="q1" value="b"> do</label><label class="option"><input type="radio" name="q1" value="c"> did</label></div>
+    <div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="The speaker corrects a false assumption in the present: I do like it."></div>
+  </div></div></div>
+
+  <div class="question" data-type="radio" data-answer="c"><div class="qrow"><div class="num">2</div><div class="qbody">
+    <p class="prompt">“Woody never warned us.” — “He ___ warn us. I heard him.”</p>
+    <div class="options"><label class="option"><input type="radio" name="q2" value="a"> does</label><label class="option"><input type="radio" name="q2" value="b"> was</label><label class="option"><input type="radio" name="q2" value="c"> did</label></div>
+    <div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="The correction refers to a finished past event, so use did + base verb: did warn."></div>
+  </div></div></div>
+
+  <div class="question" data-type="radio" data-answer="a"><div class="qrow"><div class="num">3</div><div class="qbody">
+    <p class="prompt">“Jessie seems cheerful, but does she miss the others?” — “She ___ miss them.”</p>
+    <div class="options"><label class="option"><input type="radio" name="q3" value="a"> does</label><label class="option"><input type="radio" name="q3" value="b"> do</label><label class="option"><input type="radio" name="q3" value="c"> did</label></div>
+    <div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="Jessie = she, present tense → does miss."></div>
+  </div></div></div>
+
+  <div class="question" data-type="radio" data-answer="b"><div class="qrow"><div class="num">4</div><div class="qbody">
+    <p class="prompt">Which sentence is grammatically correct?</p>
+    <div class="options"><label class="option"><input type="radio" name="q4" value="a"> Buzz does believes him.</label><label class="option"><input type="radio" name="q4" value="b"> Buzz does believe him.</label><label class="option"><input type="radio" name="q4" value="c"> Buzz do believe him.</label></div>
+    <div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="After does, use the base verb: does believe."></div>
+  </div></div></div>
+
+  <div class="question" data-type="radio" data-answer="c"><div class="qrow"><div class="num">5</div><div class="qbody">
+    <p class="prompt">Which sentence has the strongest corrective meaning?</p>
+    <div class="options"><label class="option"><input type="radio" name="q5" value="a"> Woody wanted to help.</label><label class="option"><input type="radio" name="q5" value="b"> Woody was helping.</label><label class="option"><input type="radio" name="q5" value="c"> Woody did want to help.</label></div>
+    <div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="Did want explicitly emphasizes or corrects the claim that Woody did not want to help."></div>
+  </div></div></div>
+</section>
+
+<section class="panel">
+  <h2>3. Add emphasis</h2>
+  <p class="intro">Rewrite the sentence using <strong>do / does / did</strong> for emphasis.</p>
+<div class="question" data-type="text" data-answer="i do trust buzz"><div class="qrow"><div class="num">6</div><div class="qbody">
+<p class="prompt">I trust Buzz. → <strong>___</strong></p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="I + present → do + base verb: I do trust Buzz."></div>
+</div></div></div><div class="question" data-type="text" data-answer="jessie does miss her friends"><div class="qrow"><div class="num">7</div><div class="qbody">
+<p class="prompt">Jessie misses her friends. → <strong>___</strong></p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Jessie = she, so use does + base verb: does miss, not does misses."></div>
+</div></div></div><div class="question" data-type="text" data-answer="woody did try to explain"><div class="qrow"><div class="num">8</div><div class="qbody">
+<p class="prompt">Woody tried to explain. → <strong>___</strong></p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Past emphasis: did + base verb → did try."></div>
+</div></div></div><div class="question" data-type="text" data-answer="they do care about andy"><div class="qrow"><div class="num">9</div><div class="qbody">
+<p class="prompt">They care about Andy. → <strong>___</strong></p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="They + present → do care."></div>
+</div></div></div></section><section class="panel"><h2>4. Complete the dialogue</h2><p class="intro">Use <strong>do, does, did</strong> or the correct question tag.</p><div class="question" data-type="text" data-answer="do"><div class="qrow"><div class="num">10</div><div class="qbody">
+<p class="prompt">Buzz: “You hate this idea.”<br>Woody: “I <strong>___</strong> like the idea. I’m just worried about the timing.”</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Woody corrects Buzz’s assumption, so emphatic do is natural."></div>
+</div></div></div><div class="question" data-type="text" data-answer="does"><div class="qrow"><div class="num">11</div><div class="qbody">
+<p class="prompt">Jessie: “Rex never helps.”<br>Hamm: “He <strong>___</strong> help. He’s just nervous.”</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Rex = he; present correction → does help."></div>
+</div></div></div><div class="question" data-type="text" data-answer="did"><div class="qrow"><div class="num">12</div><div class="qbody">
+<p class="prompt">Buzz: “You didn’t tell us about the plan.”<br>Woody: “I <strong>___</strong> tell you. You were arguing.”</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="This corrects a claim about the past → did tell."></div>
+</div></div></div><div class="question" data-type="text" data-answer="don't you||do you not"><div class="qrow"><div class="num">13</div><div class="qbody">
+<p class="prompt">“You do understand the risk, <strong>___</strong>?”</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="A positive statement takes a negative tag: You do understand…, don’t you?"></div>
+</div></div></div><div class="question" data-type="text" data-answer="didn't he||did he not"><div class="qrow"><div class="num">14</div><div class="qbody">
+<p class="prompt">“Woody did warn everyone, <strong>___</strong>?”</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Past emphatic did is repeated in the tag: didn’t he?"></div>
+</div></div></div></section><section class="panel"><h2>5. Repair the grammar</h2><p class="intro">Correct the emphasized verb phrase. Write only the corrected phrase.</p><div class="question" data-type="text" data-answer="does care"><div class="qrow"><div class="num">15</div><div class="qbody">
+<p class="prompt">❌ Buzz <strong>does cares</strong> about the team.<br>Correct phrase: ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Does already carries the third-person marking, so the main verb stays in the base form: does care."></div>
+</div></div></div><div class="question" data-type="text" data-answer="did try"><div class="qrow"><div class="num">16</div><div class="qbody">
+<p class="prompt">❌ Woody <strong>did tried</strong> to stop them.<br>Correct phrase: ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Did carries the past tense, so use the base verb: did try."></div>
+</div></div></div><div class="question" data-type="text" data-answer="does know"><div class="qrow"><div class="num">17</div><div class="qbody">
+<p class="prompt">❌ Jessie says Buzz is confused, but he <strong>do know</strong> the way.<br>Correct phrase: ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="He requires does in the present: does know."></div>
+</div></div></div><div class="question" data-type="text" data-answer="is brave"><div class="qrow"><div class="num">18</div><div class="qbody">
+<p class="prompt">❌ Buzz <strong>does be brave</strong> when the others need him.<br>Correct phrase: ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="We do not normally use emphatic do with the verb be. Use is brave; in speech, stress can fall on is."></div>
+</div></div></div></section><section class="panel case"><h2 class="case-title">6. Final mission: What really happened?</h2><p class="intro">Choose the form that makes the speaker’s attitude clear.</p><div class="question" data-type="radio" data-answer="b"><div class="qrow"><div class="num">19</div><div class="qbody">
+<p class="prompt">Someone says, “Woody didn’t care what happened.” Which reply gives the clearest correction?</p><div class="options"><label class="option"><input type="radio" name="q19" value="a"> Woody cared.</label><label class="option"><input type="radio" name="q19" value="b"> Woody did care.</label><label class="option"><input type="radio" name="q19" value="c"> Woody was caring.</label></div><div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="Did care directly contradicts the negative claim and adds emphasis."></div>
+</div></div></div><div class="question" data-type="text" data-answer="i do believe you"><div class="qrow"><div class="num">20</div><div class="qbody">
+<p class="prompt">Buzz says, “You think I’m making this up.” Rewrite Woody’s reassuring reply with emphasis: <strong>I believe you.</strong> → ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Present reassurance with I → do + base verb: I do believe you."></div>
+</div></div></div><div class="question" data-type="text" data-answer="she does remember"><div class="qrow"><div class="num">21</div><div class="qbody">
+<p class="prompt">Someone doubts Jessie’s memory. Complete: “<strong>___</strong> the route. She showed it to me yesterday.” <em>(she / remember)</em></p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="The speaker corrects a doubt in the present: she does remember."></div>
+</div></div></div><div class="question" data-type="text" data-answer="they did hear us"><div class="qrow"><div class="num">22</div><div class="qbody">
+<p class="prompt">Rewrite with emphatic <strong>did</strong>: <em>They heard us.</em> → ___</p><input type="text"><div class="btnrow"><button class="check">Check</button><button class="show">Show answer</button></div><div class="feedback" data-expl="Past emphasis: did + base verb → They did hear us."></div>
+</div></div></div><div class="question" data-type="radio" data-answer="a"><div class="qrow"><div class="num">23</div><div class="qbody">
+<p class="prompt">Which sentence sounds most natural if the speaker is surprised by their own opinion?</p><div class="options"><label class="option"><input type="radio" name="q23" value="a"> I do like this new plan.</label><label class="option"><input type="radio" name="q23" value="b"> I am like this new plan.</label><label class="option"><input type="radio" name="q23" value="c"> I did liking this new plan.</label></div><div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="Do like is a natural emphatic present form and can express unexpected enthusiasm."></div>
+</div></div></div><div class="question" data-type="radio" data-answer="c"><div class="qrow"><div class="num">24</div><div class="qbody">
+<p class="prompt">Which sentence should NOT use emphatic do?</p><div class="options"><label class="option"><input type="radio" name="q24" value="a"> They do want to help.</label><label class="option"><input type="radio" name="q24" value="b"> Woody did call yesterday.</label><label class="option"><input type="radio" name="q24" value="c"> Buzz does can fly.</label></div><div class="btnrow"><button class="check">Check</button></div><div class="feedback" data-expl="Can is a modal verb, so we do not add do/does before it. Say Buzz can fly, stressing can if emphasis is needed."></div>
+</div></div></div></section>
+
+<div class="scorebox"><div><strong id="scoreLabel">Score: 0 / 24</strong><div class="mini" id="scoreMessage">Complete the missions and check the emphasis.</div></div><button class="ghost" id="resetAll">Reset all</button></div>
+<div class="footer">Standalone B2 study sheet • no internet required</div>
+</div>
+
+<script>
+(function(){
+ const qs=[...document.querySelectorAll('.question')], checked=new Map();
+ const norm=s=>(s||'').toLowerCase().replace(/[’‘]/g,"'").replace(/[.,!?;:]+$/g,'').replace(/\s+/g,' ').trim();
+ function val(q){if(q.dataset.type==='radio'){const c=q.querySelector('input[type=radio]:checked');return c?c.value:'';}return q.querySelector('input[type=text]').value;}
+ function ok(q,v){return (q.dataset.answer||'').split('||').map(norm).includes(norm(v));}
+ function pretty(q){return (q.dataset.answer||'').split('||')[0]}
+ function mark(q,yes){if(q.dataset.type==='text'){const i=q.querySelector('input[type=text]');i.classList.remove('correct-field','wrong-field');i.classList.add(yes?'correct-field':'wrong-field');}}
+ function check(q){const f=q.querySelector('.feedback'),v=val(q);if(!v){f.className='feedback note';f.innerHTML='Choose or type an answer first.';return;}const yes=ok(q,v);checked.set(q,yes);mark(q,yes);f.className=yes?'feedback ok':'feedback no';f.innerHTML=(yes?'✅ <strong>Correct.</strong> ':'❌ <strong>Not quite.</strong> ')+f.dataset.expl+(yes?'':'<br><span class="hintline">Try again, or use “Show answer” if available.</span>');update();}
+ function show(q){const a=pretty(q),f=q.querySelector('.feedback');q.querySelector('input[type=text]').value=a;checked.set(q,true);mark(q,true);f.className='feedback note';f.innerHTML='💡 <strong>Answer:</strong> '+a+'. '+f.dataset.expl;update();}
+ function update(){let n=0;checked.forEach(v=>{if(v)n++;});document.getElementById('scoreLabel').textContent=`Score: ${n} / ${qs.length}`;document.getElementById('progressText').textContent=`Missions completed: ${n} / ${qs.length}`;document.getElementById('progressBar').style.width=`${n/qs.length*100}%`;let m='Complete the missions and check the emphasis.';if(n>=8)m='Nice — the contrast is becoming clearer.';if(n>=17)m='Very solid B2 control.';if(n===qs.length)m='Mission complete. Emphasis successfully deployed.';document.getElementById('scoreMessage').textContent=m;}
+ document.querySelectorAll('.check').forEach(b=>b.addEventListener('click',()=>check(b.closest('.question'))));
+ document.querySelectorAll('.show').forEach(b=>b.addEventListener('click',()=>show(b.closest('.question'))));
+ document.querySelectorAll('input[type=text]').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter')check(i.closest('.question'));}));
+ document.getElementById('resetAll').addEventListener('click',()=>{if(!confirm('Reset all answers and feedback?'))return;qs.forEach(q=>{checked.delete(q);q.querySelectorAll('input').forEach(i=>{if(i.type==='radio')i.checked=false;else i.value='';i.classList.remove('correct-field','wrong-field');});const f=q.querySelector('.feedback');f.className='feedback';f.innerHTML='';});update();window.scrollTo({top:0,behavior:'smooth'});});
+ update();
+})();
+</script>
+</body>
+</html>
